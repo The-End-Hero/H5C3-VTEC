@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            max-width: 150px;
+            transition: 1s filter, 1s -webkit-filter;
+            -webkit-filter: grayscale(1)sepia(1)blur(1px);
+            filter: grayscale(1)sepia(1)blur(1px);
+        }
+
+        img:hover,
+        img:focus {
+            -webkit-filter: none;
+            filter: none;
+        }
+    </style>
+</head>
+<body>
+<div><img src="IMG_20161017_121458.jpg" alt=""></div>
+</body>
+</html>
