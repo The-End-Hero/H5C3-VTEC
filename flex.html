@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
     <style>
         .flex_box{
             background: black;
@@ -18,13 +22,22 @@
             background: deeppink;
         }
     </style>
+    <script src="source/prettify.js"></script>
+    <link rel="stylesheet" href="source/prettify.css">
+    <link rel="stylesheet" href="source/doxy.css">
 </head>
-<body>
+<body onload="prettyPrint()">
     <div class="flex_box">
         <div class="flex_box_son"></div>
         <div class="flex_box_son"></div>
         <div class="flex_box_son"></div>
         <div class="flex_box_son"></div>
     </div>
+    <pre class="prettyprint">
+    @*你的代码片断*@
+        function fn(){
+            console.log(123)
+        }
+    </pre>
 </body>
 </html>
