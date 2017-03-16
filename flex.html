@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script
-            src="https://code.jquery.com/jquery-1.12.4.js"
-            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-            crossorigin="anonymous"></script>
+    <script src="source/jquery-2.1.1.min.js"></script>
     <style>
-        .flex_box{
-            background: black;
-            display: flex;
-            width: 300px;
-            height: 50px;
+        a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
         }
-        .flex_box_son{
+
+        body {
+            background: black;
+        }
+
+        .flex_box {
+            background: #555;
+            display: flex;
+            width: 800px;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        .flex_box_son {
             border: 1px solid #000;
             border-radius: 4px;
             flex: 1;
@@ -22,22 +34,53 @@
             background: deeppink;
         }
     </style>
-    <script src="source/prettify.js"></script>
-    <link rel="stylesheet" href="source/prettify.css">
-    <link rel="stylesheet" href="source/doxy.css">
+    <script src="source/highlight.pack.js"></script>
+    <link rel="stylesheet" href="source/monokai-sublime.css">
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
-<body onload="prettyPrint()">
-    <div class="flex_box">
-        <div class="flex_box_son"></div>
-        <div class="flex_box_son"></div>
-        <div class="flex_box_son"></div>
-        <div class="flex_box_son"></div>
-    </div>
-    <pre class="prettyprint">
-    @*你的代码片断*@
-        function fn(){
-            console.log(123)
+<body>
+<div class="flex_box">
+    <div class="flex_box_son"></div>
+    <div class="flex_box_son"></div>
+    <div class="flex_box_son"></div>
+    <div class="flex_box_son"></div>
+</div>
+<pre>
+        <code class="css">
+        .flex_box{
+            display: flex;
         }
+        .flex_box_son{
+            flex: 1;
+        }
+        </code>
     </pre>
+<pre>
+        <code class="css">
+        .flex_box{
+            display: flex;
+        }
+        .flex_box_son{
+            flex: 1;
+        }
+        </code>
+    </pre>
+<pre>
+        <code class="css">
+        .flex_box{
+            display: flex;
+        }
+        .flex_box_son{
+            flex: 1;
+        }
+        </code>
+    </pre>
+<script>
+    $(document).ready(function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
 </body>
 </html>
